@@ -1,0 +1,28 @@
+<template name="incoming">
+    <div class="container">
+      <h1 class="text-center"><a href="/">You First!</a></h1>
+      <h2 class="text-center">Looks like someone asked you to share a secret. Fill in your answer below to see their answer!</h2>
+      <div class="panel panel-default">
+        <div class="panel-heading">Topic: <h3>{{topic}}</h3>
+        </div>
+        <div class="panel-body">Your Secret:
+          <div class="row">
+            <div class="col-md-8">
+              <input type="text" class="form-control secret-content" placeholder="">
+              <div style="display:none" class="input-error error">
+              <h6>Come on... Your answer can't be that small.</h6>
+              </div>
+              <div style="display:none" class="already-answered error">
+              <h6> Looks like this secret has already been answered :(</h6><a class="btn btn-success btn-sm" href="/">Start a new Secret</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-success btn-sm submit-secret">Submit</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">Their Secret: <h3 class="their-secret">Waiting for your answer...</h3>
+        </div>
+      </div>
+    </div>
+</template>
